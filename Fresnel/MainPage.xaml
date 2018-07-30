@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fresnel.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
+            BackgroundColor="White">
+
+            <StackLayout Orientation="Vertical">
+
+                <!-- 
+             This StackLayout you can use for other
+             data that you want to have in your menu drawer
+             -->
+                <StackLayout BackgroundColor="White"
+                     HeightRequest="0">
+                </StackLayout>
+
+                <!--qq-->
+                <ListView x:Name="navigationDrawerList"
+                    RowHeight="65"
+                    SeparatorVisibility="Default"
+                    BackgroundColor="Snow"
+                    ItemSelected="OnMenuItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <!-- Main design for our menu items -->
+                                <StackLayout VerticalOptions="FillAndExpand"
+                                     Orientation="Horizontal"
+                                     Padding="20,10,0,10"
+                                     Spacing="20">
+
+                                    <Image Source="{Binding Icon}"
+                                        WidthRequest="40"
+                                        HeightRequest="40"
+                                        VerticalOptions="Center" />
+
+                                    <Label Text="{Binding Title}"
+                                        FontSize="Medium"
+                                        VerticalOptions="Center"
+                                        TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
