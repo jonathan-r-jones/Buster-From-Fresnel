@@ -151,9 +151,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Fresnel\Buster.csproj">
+    <ProjectReference Include="..\Fresnel\Buster From Fresnel.csproj">
       <Project>{5036A409-935D-41F6-8575-25C5F3122A2B}</Project>
-      <Name>Buster</Name>
+      <Name>Buster From Fresnel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
